@@ -30,6 +30,11 @@ public class Product {
 		return p.getName().toUpperCase();
 	}
 	
+	// Como é um método não static, não recebe objeto como parâmetro, ele trata com o próprio objeto da classe.
+	public String nonStaticUpperCaseName() { // Método non static.
+		return name.toUpperCase();
+	}
+	
 	@Override
 	public String toString() {
 		return name + ", " + String.format("%.2f", price);

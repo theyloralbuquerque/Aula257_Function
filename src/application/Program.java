@@ -19,11 +19,10 @@ public class Program {
 		
 		/*
 		 * list.stream(): Converte a Lista list para stream.
-		 * .map(): Aplica uma Função a todos elementos de uma stream e recebe como retorno o retorno do método staticUpperCaseName convertido em Lista. 
+		 * .map(): Aplica uma Função a todos elementos de uma stream e recebe como retorno o retorno do método nonStaticUpperCaseName() convertido em Lista. 
 		 * .collect(Collectors.toList()): Converte uma stream em uma Lista.
 		 */
-
-		List<String> names = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
+		List<String> names = list.stream().map(Product::nonStaticUpperCaseName).collect(Collectors.toList());
 
 		names.forEach(System.out::println); // Utilizando o Reference method: System.out é a classe e println é o método.
 	}
